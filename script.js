@@ -3,8 +3,10 @@
 const displayResult = document.querySelector('.display__result');
 const displayCalculation = document.querySelector('.display__calculation');
 const btnClear = document.querySelector('.btn--clear');
-const allBtnNums = Array.from(document.querySelectorAll('.btn__num'));
-const allBtnOperators = Array.from(document.querySelectorAll('.btn__operator'));
+const allBtnNums = Array.from(document.querySelectorAll('[data-num'));
+const allBtnOperators = Array.from(
+	document.querySelectorAll('[data-operator]')
+);
 const btnEquals = document.querySelector('.btn--equals');
 const btnDelete = document.querySelector('.btn--del');
 const btnPercent = document.querySelector('.btn--percent');
@@ -15,15 +17,6 @@ let answer = '';
 let operator;
 let symbol;
 let operatorClick = 0;
-
-// to extract display info
-// allBtns.forEach((btn) => console.log(btn.classList[1].replace(/btn--/g, '')));
-
-// function that populates display when you click on the number btns
-// store the 'display value' into a variable
-
-// store the first number that is input into the calculator when uer presses an operator
-// and save which operation has been chosen, then oerate() when user presses =
 
 const operate = function (str1, str2, operator) {
 	const num1 = +str1;
@@ -79,7 +72,9 @@ btnClear.addEventListener('click', function () {
 
 allBtnNums.forEach((btn) => {
 	btn.addEventListener('click', function (e) {
-		let clicked = e.target.classList[2].replace(/btn--/g, '');
+		let clicked = e.target.textContent;
+		console.log(clicked);
+
 		if (!operator) {
 			if (!str1 && clicked === '0') {
 				// no leading zeros
@@ -100,9 +95,9 @@ allBtnNums.forEach((btn) => {
 
 allBtnOperators.forEach((btn) => {
 	btn.addEventListener('click', function (e) {
-		let clicked = e.target.classList[2].replace(/btn--/g, '');
+		let clicked = e.target.dataset.operator;
 		operator = clicked;
-
+		console.log(clicked);
 		symbol =
 			operator === 'divide'
 				? '\u00F7'
