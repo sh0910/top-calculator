@@ -22,7 +22,6 @@ allBtnNums.forEach((btn) => {
 	btn.addEventListener('click', function (e) {
 		const num = e.target.textContent;
 
-		// If no operator, num added to firstNum
 		if (operator === '') {
 			if (num === '.' && firstNum.includes('.')) return;
 			firstNum += num;
