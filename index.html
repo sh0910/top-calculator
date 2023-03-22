@@ -5,46 +5,37 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Project: Calculator</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap"
-			rel="stylesheet"
-		/>
 		<link rel="stylesheet" href="style.css" />
 		<script defer src="script.js"></script>
 	</head>
 	<body>
+		<h1>Calculator</h1>
 		<div class="calculator">
 			<div class="display">
-				<div class="display__result"></div>
-				<div class="display__calculation"></div>
+				<div class="display__result">0</div>
+				<div class="display__calculation">1 * 0</div>
 			</div>
 			<div class="btns">
-				<div class="btns__left">
-					<button class="btn btn--clear">AC</button>
-					<button class="btn btn--del">DEL</button>
-					<button class="btn btn--percent">&percnt;</button>
-					<button class="btn" data-num>7</button>
-					<button class="btn" data-num>8</button>
-					<button class="btn" data-num>9</button>
-					<button class="btn" data-num>4</button>
-					<button class="btn" data-num>5</button>
-					<button class="btn" data-num>6</button>
-					<button class="btn" data-num>1</button>
-					<button class="btn" data-num>2</button>
-					<button class="btn" data-num>3</button>
-					<button class="btn" data-num>4</button>
-					<button class="btn" data-num>0</button>
-					<button class="btn" data-num=".">&period;</button>
-				</div>
-				<div class="btns__right">
-					<button class="btn" data-operator="divide">&divide;</button>
-					<button class="btn" data-operator="multiply">&times;</button>
-					<button class="btn" data-operator="subtract">&minus;</button>
-					<button class="btn" data-operator="add">&plus;</button>
-					<button class="btn btn--equals">&equals;</button>
-				</div>
+				<button class="btn btn--clear">AC</button>
+				<button class="btn btn--del">DEL</button>
+				<button class="btn btn--percent">&percnt;</button>
+				<button class="btn" data-operator="divide">&divide;</button>
+				<button class="btn" data-num>7</button>
+				<button class="btn" data-num>8</button>
+				<button class="btn" data-num>9</button>
+				<button class="btn" data-operator="multiply">&times;</button>
+				<button class="btn" data-num>4</button>
+				<button class="btn" data-num>5</button>
+				<button class="btn" data-num>6</button>
+				<button class="btn" data-operator="subtract">&minus;</button>
+				<button class="btn" data-num>1</button>
+				<button class="btn" data-num>2</button>
+				<button class="btn" data-num>3</button>
+				<button class="btn" data-operator="add">&plus;</button>
+				<button class="btn" data-num>4</button>
+				<button class="btn" data-num>0</button>
+				<button class="btn" data-num=".">&period;</button>
+				<button class="btn btn--equals">&equals;</button>
 			</div>
 		</div>
 	</body>

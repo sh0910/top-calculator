@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
@@ -5,55 +7,52 @@
 }
 
 body {
-	font-size: 16pt;
+	color: #182c35;
+	background-color: #e9c46a;
+	font-size: 16px;
 	font-family: 'Courier Prime', monospace;
 	text-align: center;
 }
 
+h1 {
+	margin-top: 30px;
+}
+
 .calculator {
-	/* witdh to fit contents */
 	display: inline-block;
 	margin: 30px auto;
-	background-color: #2b3467;
+	background-color: #3c5964;
 	overflow: hidden;
-	border: 5px solid gray;
-	border-radius: 3%;
+	border: 5px solid #223f4b;
+	border-radius: 9px;
 }
 
 .display {
 	height: 110px;
 	width: 210px;
-	color: white;
+	color: #e9edee;
 	text-align: right;
 	padding: 15px 10px;
-	border: 5px solid gray;
-	border-bottom: none;
+	border-top-left-radius: 9px;
+	border-top-right-radius: 9px;
+	overflow: hidden;
+	border-bottom: 5px solid #223f4b;
 }
 
 .display__result {
 	font-size: 3rem;
+	min-height: 55px;
 }
 
 .btns {
-	display: flex;
-	border: 5px solid gray;
-}
-
-.btns__left {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-}
-
-.btns__right {
-	display: flex;
-	flex-direction: column;
-}
-
-.btns__operators {
-	background-color: orange;
+	grid-template-columns: repeat(4, 1fr);
+	margin: 5px;
+	padding: 5px 0;
 }
 
 .btn {
+	background-color: #d3d9db;
 	font-size: 1.2rem;
 	margin: 5px;
 	width: 40px;
@@ -63,26 +62,13 @@ body {
 	padding: 10px;
 }
 
-.btns__left > .btn {
-	background-color: #bad7e9;
-}
-
-.btns__right > .btn {
-	background-color: #eb455f;
-}
-
-.btn--0 {
-	width: auto;
-	border-radius: 25px;
-	grid-column: 1 / 3;
-}
-
 .btn--clear,
 .btn--del {
-	font-size: 1vw;
+	font-size: 9px;
+	font-weight: bold;
 }
 
 .btn:hover,
 .btn:active {
-	background-color: orange;
+	background-color: #e76f51;
 }
